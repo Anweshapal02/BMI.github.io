@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BMI check</title>
+
+   <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+    <div class="container">
+  <h1>BMI calculator</h1>
+
+  <p>Weight(in kg)</p>
+  <input type="text" id="weight">
+
+  <p>height(in ft)</p>
+  <input type="text" id="height">
+
+  <p>BMI value </p>
+  <input type="text" id="bmi">
+
+  <button id="btn" onclick="getbmivalue()">Calculate</button>
+  
+
+  </div>
+<script>
+     
+    function getbmivalue(){
+    
+        var weight=document.getElementById('weight').value;
+        var height=document.getElementById('height').value;
+
+
+        height = height *12;
+    height = height * 0.025;
+
+    var newbmi = weight / (Math.pow(height,2));
+   sk= Math.round(newbmi);
+    document.getElementById('bmi').value=sk;
+
+
+    }
+
+   
+</script>
+
+</body>
+</html>
